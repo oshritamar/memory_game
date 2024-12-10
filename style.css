@@ -1,0 +1,198 @@
+body {
+    background: url(view.jpg) no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+  
+  #game-board {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    height: auto;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+  
+  .card {
+    width: 100%;
+    height: 100px;
+    background-image: url('the\ back.jpg'); 
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s;
+  }
+  
+  .card.flipped, .card.matched {
+    background-color: lightgreen; 
+    color: black; 
+    background-image: none; 
+  }
+  
+  .hidden {
+    display: none !important
+  }
+  
+  #player-display {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  #timer {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.7); 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    border: 2px solid #fda085; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  #setup-form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; 
+      width: 90%; 
+      max-width: 350px; 
+      margin: auto;
+      padding: 40px; 
+      background-color: rgba(222, 219, 232, 0.75); 
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); 
+      border-radius: 25px;
+  }
+  #setup-form h1{
+      color: #2575fc;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 2rem;
+      border-bottom: 4px solid aqua;
+      margin: 19px;
+  }
+  #setup-form h2{
+      color: rebeccapurple;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 1.5rem;
+      margin: 10px;
+  }
+  #setup-form h3{
+      color: rebeccapurple;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 1.2rem;
+      margin: 10px;
+  }
+  .box{
+      padding: 12px;
+      margin: 20px;
+      width: 65%;
+      border: none;
+      outline: none;
+      border-radius: 20px;
+      background-color: aqua;
+      box-shadow: 0px 4px 10px rgba(10, 66, 205, 0.25);
+      font-style: italic;
+      font-size: 1rem;
+  }
+  #start-playing,
+  #restart-game {
+      padding: 10px 5%;
+      margin-top: 20px;
+      width: 80%; 
+      max-width: 200px; 
+      background-color: rgb(215, 225, 250);
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); 
+      color: black;
+      border: none;
+      outline: none;
+      border-radius: 20px;
+      font-size: 1rem;
+      transition: 0.3s ease-in-out;
+  }
+  #start-playing:hover,
+  #restart-game:hover
+   {
+      cursor: pointer;
+      background-color: blue;
+      color: white;
+      transform: scale(1.1); 
+  }
+  #play-music body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      font-family: Arial, sans-serif;
+      position: relative;
+  }
+  #play-music {
+      position: absolute; 
+      top: 10px;
+       right: 10px;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      color: white;
+      background: linear-gradient(90deg, #4facfe, #00f2fe);
+      border: none;
+      border-radius: 50px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      max-width: 200px; 
+      max-height: 65px; 
+      text-align: center; 
+      transition: all 0.3s ease;
+  
+  }
+  
+  #play-music:hover {
+      transform: scale(1.1);
+      background: linear-gradient(90deg, #5fa449, #58f938);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  }
+  #play-music:active {
+      transform: scale(0.95);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  #game-setup, #game-area {
+      margin: 20px auto;
+      max-width: 600px;
+    }
+  
+    .card:active {
+      transform: scale(0.95); 
+    }
+  
+  
+    #player-display,#timer, #game-board {
+    margin-top: 80px; 
+  }
+  #game-area h3{
+    color: maroon;
+  }
